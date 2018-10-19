@@ -1,0 +1,38 @@
+CMake Error at cpp/CMakeLists.txt:114 (install):
+  install TARGETS given no LIBRARY DESTINATION for shared library target
+  "flann_cpp".
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/zgornel/projects/FLANN.jl/deps/src/flann-1.9.1/CMakeFiles/CMakeOutput.log".
+[ Info: Attempting to create directory /home/zgornel/projects/FLANN.jl/deps/downloads
+[ Info: Directory /home/zgornel/projects/FLANN.jl/deps/downloads already exists
+[ Info: Downloading file https://github.com/mariusmuja/flann/archive/1.9.1.tar.gz
+[ Info: Done downloading file https://github.com/mariusmuja/flann/archive/1.9.1.tar.gz
+[ Info: Attempting to create directory /home/zgornel/projects/FLANN.jl/deps/src
+[ Info: Directory /home/zgornel/projects/FLANN.jl/deps/src already exists
+[ Info: Attempting to create directory /home/zgornel/projects/FLANN.jl/deps
+[ Info: Directory /home/zgornel/projects/FLANN.jl/deps already exists
+[ Info: Path /home/zgornel/projects/FLANN.jl/deps/src/flann-1.9.1 already exists
+[ Info: Attempting to create directory /home/zgornel/projects/FLANN.jl/deps/builds/1.9.1
+[ Info: Directory /home/zgornel/projects/FLANN.jl/deps/builds/1.9.1 already exists
+[ Info: Changing directory to /home/zgornel/projects/FLANN.jl/deps/builds/1.9.1
+ERROR: LoadError: failed process: Process(`cmake -Wno-dev -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/zgornel/projects/FLANN.jl/deps/usr -DEXECUTABLE_OUTPUT_PATH=/home/zgornel/projects/FLANN.jl/deps/usr -DLIBRARY_OUTPUT_PATH=/home/zgornel/projects/FLANN.jl/deps/usr -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF -DBUILD_DOC=OFF -DBUILD_MATLAB_BINDINGS=OFF /home/zgornel/projects/FLANN.jl/deps/src/flann-1.9.1`, ProcessExited(1)) [1]
+Stacktrace:
+ [1] run(::Cmd) at ./process.jl:661
+ [2] macro expansion at ./logging.jl:308 [inlined]
+ [3] run(::BinDeps.SynchronousStepCollection) at /home/zgornel/.julia/packages/BinDeps/ZEval/src/BinDeps.jl:518
+ [4] run(::FileRule) at /home/zgornel/.julia/packages/BinDeps/ZEval/src/BinDeps.jl:483
+ [5] macro expansion at ./logging.jl:308 [inlined]
+ [6] run(::BinDeps.SynchronousStepCollection) at /home/zgornel/.julia/packages/BinDeps/ZEval/src/BinDeps.jl:518
+ [7] macro expansion at ./logging.jl:308 [inlined]
+ [8] run(::BinDeps.SynchronousStepCollection) at /home/zgornel/.julia/packages/BinDeps/ZEval/src/BinDeps.jl:518
+ [9] satisfy!(::BinDeps.LibraryDependency, ::Array{DataType,1}) at /home/zgornel/.julia/packages/BinDeps/ZEval/src/dependencies.jl:944
+ [10] satisfy!(::BinDeps.LibraryDependency) at /home/zgornel/.julia/packages/BinDeps/ZEval/src/dependencies.jl:922
+ [11] top-level scope at /home/zgornel/.julia/packages/BinDeps/ZEval/src/dependencies.jl:977
+ [12] include(::String) at ./client.jl:388
+ [13] top-level scope at none:0
+in expression starting at /home/zgornel/projects/FLANN.jl/deps/build.jl:49
+flannusrdir = "/home/zgornel/projects/FLANN.jl/deps/usr"
+flannlib = "/home/zgornel/projects/FLANN.jl/deps/usr/lib/libflann.so"
+flannbuilddir = "/home/zgornel/projects/FLANN.jl/deps/builds/1.9.1"

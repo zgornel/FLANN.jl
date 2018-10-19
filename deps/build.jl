@@ -1,4 +1,5 @@
 using BinDeps
+using Libdl
 
 @BinDeps.setup
 
@@ -27,12 +28,12 @@ provides(BuildProcess,
     @build_steps begin
         ChangeDirectory(flannbuilddir)
         FileRule(flannlib, @build_steps begin
-            `cmake -Wno-dev -DCMAKE_BUILD_TYPE="Release" \\
-            -DCMAKE_INSTALL_PREFIX="$flannusrdir" \\
-            -DBUILD_PYTHON_BINDINGS=OFF \\
-            -DBUILD_EXAMPLES=OFF \\
-            -DBUILD_TESTS=OFF \\
-            -DBUILD_DOC=OFF \\
+            `cmake -Wno-dev -DCMAKE_BUILD_TYPE="Release"
+            -DCMAKE_INSTALL_PREFIX="$flannusrdir"
+            -DBUILD_PYTHON_BINDINGS=OFF
+            -DBUILD_EXAMPLES=OFF
+            -DBUILD_TESTS=OFF
+            -DBUILD_DOC=OFF
             -DBUILD_MATLAB_BINDINGS=OFF $flannsrcdir`
             `make`
             `make install`
